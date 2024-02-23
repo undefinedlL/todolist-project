@@ -1,0 +1,124 @@
+.add-item-input-block {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+
+.input-form-block-dark, 
+.input-form-block-light {
+    width: 70%;
+
+    border: none;
+    border-radius: 10px;
+    
+    display: block;
+    margin-right: 10px;
+    position: relative;
+}
+.input-form-block-dark {
+    background: #161616;
+    color: #fff;
+}
+.input-form-block-light {
+    background: #fffffe5f;
+    color: #381d0f;
+    border: 1px solid #46221291;
+}
+
+.input-form-block-dark.error::before,
+.input-form-block-light.error::before {
+    content: "Field can not be empty!";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 5px;
+    z-index: 20;
+
+    font-size: .7rem;
+    color: rgb(210, 61, 61);
+
+    border-radius: 20px;
+
+}
+
+.input-form-block-dark.error .input-form-dark,
+.input-form-block-light.error .input-form-light {
+    animation-name: error-anim;
+    animation-duration: .4s;
+}
+
+@keyframes error-anim {
+    0% {
+        transform: translateY(-1px);
+        transform: translateX(1px);
+    }
+    20% {
+        transform: translateY(1px);
+        transform: translateX(0px);
+    }
+    40% {
+        transform: translateY(-1px);
+        transform: translateX(1px);
+    }
+    60% {
+        transform: translateY(1px);
+        transform: translateX(-1px);
+    }
+    80% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.input-form-dark,
+.input-form-light {
+    width: 100%;
+    padding: 8px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.input-form-dark {
+    color: #fff;
+}
+.input-form-light {
+    color: #161616;
+}
+
+.modal-content-light .input-form,
+.modal-content-dark .input-form {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.input-form-dark:focus {
+    outline: 1px solid #333;
+}
+
+.input-form-light:focus {
+    outline: 1px solid #5f3d219c;
+    box-shadow: 0 0 5px 1px #66544bbc;
+}
+
+.add-item-button {
+    border: none;
+    background:none;
+
+    cursor: pointer;
+}
+
+.add-item-button svg {
+    transition: all .3s ease-in-out;
+}
+
+.add-item-button:hover svg {
+    transition: all .3s ease-in-out;
+    transform: translateX(4px);
+}

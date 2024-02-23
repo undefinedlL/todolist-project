@@ -1,0 +1,290 @@
+.todolist-container-light,
+.todolist-container-dark {
+    width: 100%;
+    position: relative;
+
+    box-shadow: 0 0 15px 1px #00000077;
+    overflow: hidden;
+}
+.todolist-container-light {
+    color: #381d0f;
+}
+.todolist-container-dark {
+    color: #fff;
+}
+
+.todolist-dark,
+.todolist-light {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: 15px;
+    padding-top: 20px;
+}
+.todolist-title {
+    width: 100%;
+    overflow: hidden;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.todolist-options {
+    display: flex;
+    height: 100%;
+}
+
+
+.todolist-light {
+    background-color: rgba(138, 97, 72, 0.291);
+    
+    width: 100%;
+    height: auto;
+
+    color: #381d0f;
+}
+.todolist-dark {
+    background-color: #0e0e0e44;
+    
+    width: 100%;
+    height: auto;
+
+    color: #fff;
+}
+
+.todolist-delete-button {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+
+    transition: all .3s ease;
+}
+.todolist-delete-button:hover {
+    transform: translateY(2px);
+    transition: all .3s ease;
+}
+
+.todolist-content-dark,
+.todolist-content-light {
+    background-color: inherit;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 500ms ease-in-out;
+}
+
+.todolist-content-light {
+    background-color: rgb(241, 226, 217);
+}
+
+.todolist-content-light.open,
+.todolist-content-dark.open {
+    grid-template-rows: 1fr;
+
+}
+.todolist-content-inner {
+    min-height: 0;
+}
+
+li {
+    padding: 7px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    position: relative;
+    margin-left: 20px;
+}
+
+li input[type="checkbox"] {
+    appearance: none;
+}
+
+.task-checkbox-light, 
+.task-checkbox-dark {
+    position: absolute;
+    left: -20px;
+    top: 1px;
+    height: 1rem;
+    border-radius: 5px;
+    
+    width: 1rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.task-checkbox-dark {
+    border: 2px solid grey;
+}
+
+.task-checkbox-light {
+    border: 2px solid rgb(125, 108, 94);
+}
+
+li input:checked + .task-checkbox-light {
+    background-color: #4a3226;
+    border-color: #492e20;
+}
+
+li input:checked + .task-checkbox-dark {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.task-is-done {
+    text-decoration: line-through;
+}
+
+.del-button {
+    padding-top: 2px;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+.del-button:hover {
+    transform: scale(1.1);
+}
+
+.tasks-filter-buttons-dark,
+.tasks-filter-buttons-light {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 15px 0;
+}
+
+.tasks-filter-buttons-dark {
+    background-color: rgb(25, 25, 25);
+}
+.tasks-filter-buttons-light {
+    background-color: #4a32265d;
+}
+
+.tasks-filter-buttons-light button,
+.tasks-filter-buttons-dark button {
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    transition: all .2s ease-in;
+}
+
+.tasks-filter-buttons-dark button{ 
+    opacity: .5;
+}
+.tasks-filter-buttons-light button{ 
+    opacity: .7;
+}
+
+.tasks-filter-buttons-dark button:hover,
+.tasks-filter-buttons-light button:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+.tasks-filter-buttons-dark button.active-filtered-tasks:hover,
+.tasks-filter-buttons-light button.active-filtered-tasks:hover,
+.tasks-filter-buttons-light button.active:hover,
+.tasks-filter-buttons-dark button.active:hover {
+    opacity: 1;
+    transform: scale(1.15) translateY(-4px);
+    transition: all .2s ease-in;
+}
+.tasks-filter-buttons-dark button.active-filtered-tasks,
+.tasks-filter-buttons-light button.active-filtered-tasks,
+.tasks-filter-buttons-light button.active,
+.tasks-filter-buttons-dark button.active {
+    opacity: 1;
+    transform: scale(1.15);
+    transition: all .2s ease-in;
+}
+
+.todolist-title {
+    max-width: 70%;
+    display: block;
+}
+
+.tasks-open-button-dark.close,
+.tasks-open-button-light.close,
+.tasks-open-button-light.open,
+.tasks-open-button-dark.open {
+    width: 1rem;
+    height: 1rem;
+
+    border: 2px solid;
+    border-left: none;
+    border-top: none;
+
+    cursor: pointer;
+
+    margin-right: 20px;
+
+    transition: all .2s ease;
+}
+.tasks-open-button-dark {
+    border-color: white;
+}
+.tasks-open-button-light {
+
+    border-color: #000;
+} 
+
+.tasks-open-button-light.open,
+.tasks-open-button-dark.open {
+    transform: rotate(-135deg);
+
+    transition: all .2s ease;
+}
+
+.tasks-open-button-light.close,
+.tasks-open-button-dark.close {
+    transform: rotate(45deg);
+    opacity: .5;
+
+    transition: all .2s ease;
+}
+
+.tasks-open-button-light.close:hover,
+.tasks-open-button-dark.close:hover {
+    opacity: 1;
+
+    transition: all .2s ease;
+}
+
+
+.add-task-block {
+
+    transition: all .4s ease;
+}
+
+.add-task-block {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+.add-task-block.open {
+    grid-template-rows: 1fr;
+    transition: all .3s ease-in-out;
+}
+
+.add-task-block-content {
+    min-height: 0;
+}

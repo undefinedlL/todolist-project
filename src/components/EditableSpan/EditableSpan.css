@@ -1,0 +1,102 @@
+.item-title-span {
+    width: 100%;
+}
+
+.task-list .item-title-span {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 5px;
+} 
+
+.item-title-span .span-edition-button {
+    border: none;
+    background: none;
+
+    margin-left: 5px;
+
+    cursor: pointer;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.item-title-span:hover .span-edition-button {
+    visibility: visible;
+    opacity: .4;
+    transition: all .3s ease-in;
+}
+
+.item-title-span:hover .span-edition-button:hover {
+    opacity: 1;
+    transition: all .3s ease-in;
+}
+
+
+.editable-span-dark, 
+.editable-span-light {
+    width: 95%;
+    background-color: inherit;
+    
+    border: none;
+}
+.editable-span-dark {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.editable-span-light {
+    color: #381d0f;
+    border-bottom: 1px solid #381d0f;
+}
+
+.todolist-title .editable-span-dark,
+.todolist-title .editable-span-light {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.task-list .editable-span-dark,
+.task-list .editable-span-light {
+    font-size: 1rem;
+}
+
+.editable-span-button {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.editable-span-dark.error-input,
+.editable-span-light.error-input {
+    border-bottom: 1px solid red;
+    box-shadow: 0px 2px 0px 0px red;
+    animation-name: error-input-anim;
+    animation-duration: .4s;
+}
+
+@keyframes error-input-anim {
+    0% {
+        transform: translateY(-2px);
+        transform: translateX(1px);
+    }
+    20% {
+        transform: translateY(2px);
+        transform: translateX(0px);
+    }
+    40% {
+        transform: translateY(-1px);
+        transform: translateX(1px);
+    }
+    60% {
+        transform: translateY(2px);
+        transform: translateX(-1px);
+    }
+    80% {
+        transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
