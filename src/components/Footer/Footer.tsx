@@ -17,7 +17,7 @@ const Footer = () => {
             
 
             <nav>
-                <a href="https://github.com/Speedwagon10">
+                <a href="https://github.com/undefinedlL">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         x="0px"
