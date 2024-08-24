@@ -1,2 +1,3 @@
-# TodoList-App 
-https://undefinedll.github.io/todolist-project/
+# Todo List (React + TypeScript)
+
+link - https://undefinedll.github.io/todolist-project/
